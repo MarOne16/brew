@@ -10,14 +10,14 @@
 
 # Delete and reinstall Homebrew from Github repo
 rm -rf $HOME/.brew
-git clone --depth=1 https://github.com/Homebrew/brew $1
+git clone --depth=1 https://github.com/Homebrew/brew /goinfre/$USER/.brew
 
 # Create .brewconfig script in home directory 
 cat > $HOME/.brewconfig.zsh <<EOL
 # HOMEBREW CONFIG
 
 # Add brew to path
-export PATH=\$1/bin:\$PATH
+export PATH=/goinfre/$USER/.brew/bin:\$PATH
 
 # Set Homebrew temporary folders
 export HOMEBREW_CACHE=/tmp/\$USER/Homebrew/Caches
